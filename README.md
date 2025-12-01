@@ -1,5 +1,15 @@
 # housify-challenges
 
-One of the most challenging problems I solved recently was building the real-time availability and booking verification system for my MERN-stack project, Housify. Since multiple users could try to book the same property simultaneously, I needed a solution that ensured bookings were atomic, conflict-free, and fully synchronized across the platform. To fix this, I implemented transaction-safe booking logic using MongoDB transactions and server-side validation that re-checks availability at the exact moment of confirmation. I also built robust authentication and authorization using Auth0, which required integrating secure role-based access while keeping the user experience seamless. Another major challenge was optimizing the search + filter pipeline for properties (dates, prices, amenities) and ensuring the UI remained fast using debounced queries and indexed database fields. These problems pushed me to architect a scalable, production-ready workflow that handles real-world concurrency and maintains data integrity.
+The biggest challenge in my Housify (MERN) hotel booking platform was ensuring real-time room availability when multiple users attempted to book the same property simultaneously.
+
+I solved this by implementing MongoDB transaction-based booking logic, ensuring atomic updates and preventing double bookings.
+
+Another challenge was integrating secure authentication and role-based access control using Auth0 while keeping the login flow smooth and user-friendly.
+
+Optimizing the property search and filtering system—including price ranges, dates, and amenities—required designing efficient MongoDB indexes and debounced API requests.
+
+I also handled complex UI state management in React, especially syncing booking details, availability checks, and user sessions in real time.
+
+These problems helped me design a scalable, production-ready architecture that maintains data integrity and delivers a fast user experience.
 
 Github repo: https://github.com/sushant0911/Housify
