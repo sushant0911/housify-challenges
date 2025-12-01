@@ -1,1 +1,5 @@
 # housify-challenges
+
+One of the most challenging problems I solved recently was building the real-time availability and booking verification system for my MERN-stack project, Housify. Since multiple users could try to book the same property simultaneously, I needed a solution that ensured bookings were atomic, conflict-free, and fully synchronized across the platform. To fix this, I implemented transaction-safe booking logic using MongoDB transactions and server-side validation that re-checks availability at the exact moment of confirmation. I also built robust authentication and authorization using Auth0, which required integrating secure role-based access while keeping the user experience seamless. Another major challenge was optimizing the search + filter pipeline for properties (dates, prices, amenities) and ensuring the UI remained fast using debounced queries and indexed database fields. These problems pushed me to architect a scalable, production-ready workflow that handles real-world concurrency and maintains data integrity.
+
+Github repo: https://github.com/sushant0911/Housify
